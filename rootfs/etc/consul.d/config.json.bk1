@@ -1,0 +1,13 @@
+{
+    "datacenter": "dc1",
+    "data_dir": "/var/lib/consul",
+    "log_level": "INFO",
+    "node_name": "nginx",
+    "server": false,
+       "service": {"name": "Nginx", "tags": ["HTTP"], "port": 80,
+       "check": {"script": "curl localhost >/dev/null 2>&1", "interval": "10s"}},
+    "rejoin_after_leave": true,
+    "retry_join": [
+	"consul"
+    ]
+}
