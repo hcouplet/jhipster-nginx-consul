@@ -36,7 +36,7 @@ ENTRYPOINT ["/init"]
 CMD []
 
 EXPOSE 80 443
-VOLUME ["/var/lib/consul" "/var/cache/nginx", "/var/www"]
+VOLUME [ "/var/lib/consul", "/var/cache/nginx", "/var/www" ]
 
 HEALTHCHECK CMD /etc/consul.d/check || exit 1
 
